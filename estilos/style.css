@@ -1,0 +1,108 @@
+:root {
+    --gold: #D4AF87;
+    --dark: #1a1a1a;
+    --light: #f8f1eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(26, 26, 26, 0.879);
+    backdrop-filter: blur(10px);
+}
+.nav-item :hover {
+    background-color: var(--gold);
+    border-radius: 8px;
+    transition: background-color 0.5s, color 0.5s;
+
+}
+.text-gold {
+    color: var(--gold);
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: #000;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: #c9a66b;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Hero Banner */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('../images/banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cards */
+.service-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 30px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 175, 135, 0.2);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.price {
+    color: var(--gold);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .nav-item :hover {
+        text-decoration: underline;
+        color: var(--gold);
+        background-color:rgba(26, 26, 26, 0);
+        transition: background-color 0.5s, color 0.5s text-decoration 0.5s;
+    }
+}
